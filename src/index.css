@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a.active {
+  font-size: 1.125rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  color: slateblue;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.container {
+  max-width: 500px;
+  min-height: 300px;
+  margin: 30px auto;
+  padding: 30px;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  margin: 5px 0;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 1.030rem;
+  text-decoration: none;
+  color: #fff;
+  background: #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.animated {
+  animation: 0.150s linear 0.150s 3 alternate animated-btn;
+}
+
+.animated:hover {
+  animation: 0.250s linear 0.150s infinite alternate animated-btn-on-hover;
+}
+
+@keyframes animated-btn {
+  0% {
+    rotate: 2deg;
+  }
+
+  50%,
+  75% {
+    rotate: 0;
+  }
+
+  100% {
+    rotate: -2deg;
+  }
+}
+
+@keyframes animated-btn-on-hover {
+  from {
+    scale: 0.99;
+  }
+
+  to {
+    scale: 1.010;
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.alert,
+.error {
+  padding: 1rem;
+  margin: 1rem 0;
+  color: #fff;
+  background-color: #B22222;
+  text-align: center;
+  border: 1px solid #733635;
+  border-radius: 0.5rem;
+  animation: 0.250s linear 0.150s infinite alternate animated-alert;
+}
+
+.alert {
+  animation-iteration-count: 5;
+}
+
+.error {
+  cursor: url(./assets/cursor.png) 12 12, auto;
+}
+
+@keyframes animated-alert {
+  from {
+    scale: 0.995;
+  }
+
+  to {
+    scale: 1.005;
+  }
+}
+
+.task {
+  margin: 5px;
+  padding: 10px 20px;
+  background: #f4f4f4;
+  cursor: pointer;
+}
+
+.task.reminder {
+  border-left: 5px solid green;
+}
+
+.task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-form {
+  margin-bottom: 40px;
+}
+
+.form-control {
+  margin-top: 0.3rem;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px 0;
+  padding: 3px 7px;
+  font-size: 1.130rem;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.form-control-check label {
+  flex: 2;
+}
+
+.form-control-check input {
+  flex: 1;
+  height: 20px;
+  cursor: pointer;
+}
+
+.container:has(.about) h1 {
+  margin: 0 auto;
+}
+
+.about :where(h4, a) {
+  margin-top: 0.3rem;
+  text-align: center;
+}
+
+.about a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: double;
+  color: #733635;
+  transition: color 0.250ms ease-in;
+}
+
+.about a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  color: #B22222;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 475px) {
+  body {
+    min-width: 475px;
+    font-size: 1rem;
+  }
+
+  .container {
+    margin: 30px 30px 0;
+  }
+}
