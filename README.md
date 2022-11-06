@@ -1,4 +1,4 @@
-#React Task Tracker
+# React Task Tracker
 
 This project is a simple react app build using 'json-server' ('mock rest api') to kinda save all tasks without localstorage
 To use 'json-server' just run the command `npm run server`
@@ -10,6 +10,8 @@ This project is classic in styling and other stuff I just wanted to keep it simp
 It's beginner friendly too for everyone who's trying to get into React
 
 Who Inspired me to Work in this project: Traversy Media
+
+
 
 # Getting Started with Create React App
 
